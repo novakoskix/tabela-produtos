@@ -1,0 +1,39 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <button ngbNavLink>Pneus</button>
+    <ng-template ngbNavContent><table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Img</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Aro</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Medida</th>
+        <th scope="col">Largura</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Produto of produto" >
+        <th scope="row">{{Produto.ID}}</th>
+        <td ><img src="{{Produto.Img}}" alt="" width="80px" height="80px">  </td>
+        <td>{{Produto.Nome}}</td>
+        <td>{{Produto.Marca}}</td>
+        <td>{{Produto.Aro}}</td>
+        <td>{{Produto.Modelo}}</td>
+        <td>{{Produto.Medida}}</td>
+        <td>{{Produto.Largura}}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
+  </li>
+  <li ngbNavItem>
+
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>
+
+
+
